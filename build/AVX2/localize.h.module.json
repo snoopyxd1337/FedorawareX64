@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "C:\\Users\\BinaryX32\\source\\repos\\Fedoraware-64\\build\\AVX2\\Localize.h.obj",
+            "outputs": [
+                "C:\\Users\\BinaryX32\\source\\repos\\Fedoraware-64\\build\\AVX2\\vc143.pdb",
+                "C:\\Users\\BinaryX32\\source\\repos\\Fedoraware-64\\build\\AVX2\\",
+                "C:\\Users\\BinaryX32\\source\\repos\\Fedoraware-64\\build\\AVX2\\Localize.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "src\\SDK\\Interfaces\\Localize\\Localize.h",
+                    "source-path": "c:\\users\\binaryx32\\source\\repos\\fedoraware-64\\src\\sdk\\interfaces\\localize\\localize.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
