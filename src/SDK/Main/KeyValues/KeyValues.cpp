@@ -2,7 +2,7 @@
 #include "../../SDK.h"
 
 #pragma warning (disable : 6031)
-//why
+//why does this function return a value when we don't check it? because it's a signature scan and if it fails we want to know about it, not just silently continue and cause crashes later on down the line.
 namespace S
 {
 	MAKE_SIGNATURE(KeyValUtils_LoadFromBuffer, ENGINE_DLL, "4C 89 4C 24 ? 48 89 4C 24 ? 55 56", 0x0);
