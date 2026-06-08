@@ -2,13 +2,13 @@
 #include "../../SDK.h"
 
 #pragma warning (disable : 6031)
-
+//why does this function return a value when we don't check it? because it's a signature scan and if it fails we want to know about it, not just silently continue and cause crashes later on down the line.
 namespace S
 {
 	MAKE_SIGNATURE(KeyValUtils_LoadFromBuffer, ENGINE_DLL, "4C 89 4C 24 ? 48 89 4C 24 ? 55 56", 0x0);
-	MAKE_SIGNATURE(KeyValUtils_Initialize, ENGINE_DLL, "40 53 48 83 EC ? 48 8B D9 C7 01", 0x0);
+	MAKE_SIGNATURE(KeyValues_Initialize, "engine.dll", "40 53 48 83 EC ? 48 8B D9 C6 41 ? ? 33 C9 48 8B C2", 0x0);
 
-	MAKE_SIGNATURE(KeyValues_FindKey, CLIENT_DLL, "48 8B C4 53 57 41 56", 0x0);
+	MAKE_SIGNATURE(KeyValues_FindKey, "client.dll", "48 8B C4 53 55 56 48 81 EC ? ? ? ? 41 0F B6 E8", 0x0);
 }
 
 bool CKeyValUtils::LoadFromBuffer(KeyValues* key_value, char const* resource_name, const char* buffer, void* file_system, const char* path_id)
